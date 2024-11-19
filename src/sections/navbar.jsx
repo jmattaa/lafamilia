@@ -62,8 +62,8 @@ function Navbar({ scrollToRef }) {
 
     return (
         <motion.nav
-            className="flex items-center justify-center fixed z-50 w-full 
-                            lg:shadow-none"
+            className="flex items-center justify-center fixed z-50 w-full mt-0 
+                            lg:shadow-none lg:mt-8"
             initial={{ translateY: "-50vh", opacity: 0 }}
             animate={{ translateY: 0, opacity: 1 }}
             transition={{
@@ -74,8 +74,8 @@ function Navbar({ scrollToRef }) {
             }}>
             <div
                 className="flex items-center justify-between w-full px-3 py-6 
-                            lg:border lg:rounded-3xl lg:w-2/3 bg-black/40
-                            backdrop-blur-sm">
+                            border-white/40 lg:border lg:rounded-3xl lg:w-2/3
+                            bg-black/40 backdrop-blur-sm">
                 <motion.div
                     className="text-lg font-extrabold text-white"
                     initial={{ translateY: "-5vh", opacity: 0 }}

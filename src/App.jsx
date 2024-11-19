@@ -12,10 +12,10 @@ function App() {
             <Navbar />
             <Hero
                 title="La Familia"
-                description="Tex-mex foodtruck med lֿäcker mat"
+                description="Tex-mex foodtruck med läcker mat"
                 image="foodtruckqeue.jpeg"
                 cta_text="Kontakta oss"
-                cta_redirect="#"
+                cta_redirect="mailto:foodtruck@lafamiliam.se"
             />
             <Catering />
             <FollowBanner />
