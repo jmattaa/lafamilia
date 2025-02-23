@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-function Navbar({ scrollToRef }) {
+function Navbar() {
     const [menuState, setMenuState] = useState(false);
 
     const toggleBurger = () => {
         setMenuState(!menuState); // toggle menu
     }
 
-    const scrollToSection = (id) => {
+    const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: "smooth" });
@@ -63,7 +63,7 @@ function Navbar({ scrollToRef }) {
     return (
         <motion.nav
             className="flex items-center justify-center fixed z-50 w-full mt-0 
-                            lg:shadow-none lg:mt-8"
+                            lg:shadow-none"
             initial={{ translateY: "-50vh", opacity: 0 }}
             animate={{ translateY: 0, opacity: 1 }}
             transition={{
@@ -74,7 +74,6 @@ function Navbar({ scrollToRef }) {
             }}>
             <div
                 className="flex items-center justify-between w-full px-3 py-6 
-                            border-white/40 lg:border lg:rounded-3xl lg:w-2/3
                             bg-black/40 backdrop-blur-sm">
                 <motion.div
                     className="text-lg font-extrabold text-white"
@@ -88,8 +87,8 @@ function Navbar({ scrollToRef }) {
                     className="hidden space-x-12 items-center lg:flex">
                     {navContent}
                 </div>
-                <div className="lg:hidden" onClick={
-                    () => toggleBurger()}>
+
+                <button className="lg:hidden" onClick={toggleBurger}>
                     <svg width="32px" height="32px" viewBox="0 0 24 24"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 8H13.75M5 12H19M10.25 16L19 16"
@@ -97,23 +96,22 @@ function Navbar({ scrollToRef }) {
                             strokeLinecap="round"
                         />
                     </svg>
-
-                    <div className={`
+                </button>
+            </div>
+            <div className={`
                         flex flex-col items-center justify-center
-                        absolute top-0 left-0 w-screen
+                        fixed top-0 left-0 w-screen
                         bg-black/80 transition-[height,opacity] duration-200
                         backdrop-blur-xl
                         ${menuState ?
-                            "flex !h-screen opacity-100" :
-                            "opacity-0 h-0 pointer-events-none"
-                        }
-                    `}>
-                        <div className="w-full h-full top-0 left-0 flex flex-col 
+                    "flex !h-screen opacity-100" :
+                    "opacity-0 h-0 pointer-events-none"
+                }`}
+                onClick={toggleBurger}>
+                <div className="w-full h-full top-0 left-0 flex flex-col 
                                         items-center 
                                         justify-center [&>*]:my-6">
-                            {navContent}
-                        </div>
-                    </div>
+                    {navContent}
                 </div>
             </div>
         </motion.nav>
@@ -121,3 +119,4 @@ function Navbar({ scrollToRef }) {
 }
 
 export default Navbar;
+
