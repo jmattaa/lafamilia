@@ -3,6 +3,11 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+@font-face {
+    font-family: "Artistamp";
+    src: url("/fonts/artistamp.ttf") format("truetype");
+}
+
 body {
     font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -24,12 +29,17 @@ html {
 *::before,
 *::after {
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 :target:before {
     content: "";
     display: block;
-    height: 400px;
-    margin: -400px 0 0;
+    height: 500px;
+    margin: -500px 0 0;
 }
+
+html, body {
+    overflow-y: auto;
+}
+

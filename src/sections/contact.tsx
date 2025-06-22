@@ -2,7 +2,8 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 function Contact() {
     return (
-        <div className="flex flex-col w-full bg-palette-3 text-white 
+        <div id="contact-section"
+            className="flex flex-col w-full bg-palette-3 text-white 
                             justify-between py-16 px-8 md:flex-row">
             <div>
                 <h1 className="text-3xl font-bold">Kontakta oss:</h1>

@@ -10,23 +10,81 @@ const Menu = () => {
                 Meny
             </h1>
 
-            <div className="p-8 bg-palette-3 text-yellow font-artistamp">
+            <div className="mt-8 p-8 bg-palette-3 text-yellow">
+                <h1 className="text-center text-2xl font-artistamp">RULLAR</h1>
                 {data.rullar.map((rulle, i) => (
-                    <div key={i} className="grid grid-cols-2 py-8">
+                    <div key={i} className="grid grid-cols-2 py-3 lg:py-8">
                         <div className="flex flex-col">
-                            <h2 className="text-3xl font-bold">{rulle.name}</h2>
-                            <p>
+                            <h2 className="text-lg lg:text-3xl font-artistamp">
+                                {rulle.name} RULLE
+                            </h2>
+                            <p className="text-sm lg:text-xl">
                                 ({rulle.contents})
                             </p>
                         </div>
-                        <div className="flex flex-col items-end">
+                        <div className="flex flex-col items-end text-lg">
                             <p>{rulle.price}</p>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <hr className="w-full my-8 border-palette-4" />
+            <div className="mt-8 p-8 bg-green text-yellow">
+                <h1 className="text-center text-2xl font-artistamp">TALLRIKAR</h1>
+                {data.tallrikar.map((tallrik, i) => (
+                    <div key={i} className="grid grid-cols-2 py-3 lg:py-8">
+                        <div className="flex flex-col">
+                            <h2 className="text-lg lg:text-3xl font-artistamp">
+                                {tallrik.name} TALLRIK
+                            </h2>
+                            <p className="text-sm lg:text-xl">
+                                ({tallrik.contents})
+                            </p>
+                        </div>
+                        <div className="flex flex-col items-end text-lg">
+                            <p>{tallrik.price}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div className="mt-8 p-8 bg-orangeish text-white">
+                <h1 className="text-center text-2xl font-artistamp">SNACKS</h1>
+                {data.snacks.map((snack, i) => (
+                    <div key={i} className="grid grid-cols-2 py-3 lg:py-8">
+                        <div className="flex flex-col">
+                            <h2 className="text-lg lg:text-3xl font-artistamp">
+                                {snack.name} SNACK
+                            </h2>
+                            <p className="text-sm lg:text-xl">
+                                ({snack.contents})
+                            </p>
+                        </div>
+                        <div className="flex flex-col items-end text-lg">
+                            <p>{snack.price}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div className="mt-8 p-8 bg-yellowish text-white">
+                <h1 className="text-center text-2xl font-artistamp">BARNMENY</h1>
+                {data.barnmeny.map((barn, i) => (
+                    <div key={i} className="grid grid-cols-2 py-3 lg:py-8">
+                        <div className="flex flex-col">
+                            <h2 className="text-lg lg:text-3xl font-artistamp">
+                                {barn.name}
+                            </h2>
+                            <p className="text-sm lg:text-xl">
+                                ({barn.contents})
+                            </p>
+                        </div>
+                        <div className="flex flex-col items-end text-lg">
+                            <p>{barn.price}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 };
