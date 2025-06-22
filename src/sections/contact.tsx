@@ -1,7 +1,4 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 function Contact() {
     return (
@@ -29,13 +26,13 @@ function Contact() {
                 <a
                     href="https://www.facebook.com/profile.php?id=61550994760407"
                     className="text-3xl">
-                    <FontAwesomeIcon icon={faFacebook} />
+                    <FaFacebook />
                 </a>
                 <div className="w-8 h-8"></div>
                 <a
                     href="https://www.instagram.com/lafamilia_de_m/"
                     className="text-3xl">
-                    <FontAwesomeIcon icon={faInstagram} />
+                    <FaInstagram />
                 </a>
             </div>
         </div>
