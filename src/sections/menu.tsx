@@ -54,7 +54,7 @@ const Menu = () => {
                     <div key={i} className="grid grid-cols-2 py-3 lg:py-8">
                         <div className="flex flex-col">
                             <h2 className="text-lg lg:text-3xl font-artistamp">
-                                {snack.name} SNACK
+                                {snack.name}
                             </h2>
                             <p className="text-sm lg:text-xl">
                                 ({snack.contents})
