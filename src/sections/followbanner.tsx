@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 function FollowBanner() {
     return (
         <div
-            className="flex flex-col content-center bg-palette-3 p-16
+            className="flex flex-col content-center bg-palette-3 lg:p-16 p-4
                         flex-wrap text-white">
             {/* Title Animation */}
             <motion.h1

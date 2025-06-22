@@ -4,13 +4,13 @@ const Menu = () => {
     return (
         <div
             id="menu-section"
-            className="mt-8 p-8 w-full flex flex-col flex-wrap content-center">
+            className="mt-8 mb-20 lg:p-8 w-screen">
             <h1
-                className="text-palette-4 text-4xl text-center font-bold">
+                className="text-palette-4 text-4xl text-center font-bold mb-8">
                 Meny
             </h1>
 
-            <div className="mt-8 p-8 bg-palette-3 text-yellow">
+            <div className="lg:mt-8 p-8 bg-palette-3 text-yellow">
                 <h1 className="text-center text-2xl font-artistamp">RULLAR</h1>
                 {data.rullar.map((rulle, i) => (
                     <div key={i} className="grid grid-cols-2 py-3 lg:py-8">
@@ -29,7 +29,7 @@ const Menu = () => {
                 ))}
             </div>
 
-            <div className="mt-8 p-8 bg-green text-yellow">
+            <div className="lg:mt-8 p-8 bg-green text-yellow">
                 <h1 className="text-center text-2xl font-artistamp">TALLRIKAR</h1>
                 {data.tallrikar.map((tallrik, i) => (
                     <div key={i} className="grid grid-cols-2 py-3 lg:py-8">
@@ -48,7 +48,7 @@ const Menu = () => {
                 ))}
             </div>
 
-            <div className="mt-8 p-8 bg-orangeish text-white">
+            <div className="lg:mt-8 p-8 bg-orangeish text-white">
                 <h1 className="text-center text-2xl font-artistamp">SNACKS</h1>
                 {data.snacks.map((snack, i) => (
                     <div key={i} className="grid grid-cols-2 py-3 lg:py-8">
@@ -67,7 +67,7 @@ const Menu = () => {
                 ))}
             </div>
 
-            <div className="mt-8 p-8 bg-yellowish text-white">
+            <div className="lg:mt-8 p-8 bg-yellowish text-white">
                 <h1 className="text-center text-2xl font-artistamp">BARNMENY</h1>
                 {data.barnmeny.map((barn, i) => (
                     <div key={i} className="grid grid-cols-2 py-3 lg:py-8">
