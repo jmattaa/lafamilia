@@ -1,4 +1,10 @@
-export const rullar = [
+export type MenuItem = {
+    name: string;
+    contents: string;
+    price: string;
+}
+
+export const rullar: MenuItem[] = [
     {
         name: "Fajita",
         contents: "Stekt kyckling med paprika, lök, BBQ sås, vitlökssås, saltgurka, och sallader",
@@ -26,7 +32,7 @@ export const rullar = [
     },
 ];
 
-export const tallrikar = [
+export const tallrikar: MenuItem[] = [
     {
         name: "Fajita",
         contents: "Stekt kyckling med paprika, lök, BBQ sås, vitlökssås, saltgurka, sallader och pommes",
@@ -49,7 +55,7 @@ export const tallrikar = [
     },
 ];
 
-export const snacks = [
+export const snacks: MenuItem[] = [
     {
         name: "Nacho guacamole",
         contents: "Nachochips och guacamole",
@@ -63,6 +69,7 @@ export const snacks = [
     {
         name: "Cheese fries",
         contents: "Pommes, tomat, cheddarost och jalapeño",
+        price: "54 kr",
     }
 ];
 

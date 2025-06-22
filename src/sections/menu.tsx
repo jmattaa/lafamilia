@@ -1,6 +1,4 @@
-import Reac from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import * as data from "../data/meny";
+import * as data from "../data/meny.ts";
 
 const Menu = () => {
     return (
