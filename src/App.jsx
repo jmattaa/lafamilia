@@ -5,6 +5,7 @@ import FollowBanner from './sections/followbanner';
 import Hero from './sections/hero';
 import Contact from './sections/contact';
 import ImageCarousel from './sections/carousel';
+import Menu from './sections/menu';
 
 function App() {
     return (
@@ -17,8 +18,9 @@ function App() {
                 cta_text="Kontakta oss"
                 cta_redirect="mailto:foodtruck@lafamiliam.se"
             />
-            <Catering />
+            <Menu />
             <FollowBanner />
+            <Catering />
             <About />
             <ImageCarousel />
             <Contact />

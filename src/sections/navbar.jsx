@@ -18,6 +18,7 @@ function Navbar({ scrollToRef }) {
 
 
     const navLinks = [
+        ["Meny", "menu-section"],
         ["Catering", "catering-section"],
         ["Om Oss", "about-section"],
     ];
