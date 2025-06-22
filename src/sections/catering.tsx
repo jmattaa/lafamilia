@@ -4,7 +4,8 @@ function Catering() {
     return (
         <motion.div
             id="catering-section"
-            className="w-full flex flex-col-reverse px-8 py-12 content-center flex-wrap lg:flex-row lg:px-20"
+            className="w-full flex flex-col-reverse px-8 py-12 content-center 
+                        flex-wrap lg:flex-row lg:px-20"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -38,10 +39,19 @@ function Catering() {
 
             {/* Image */}
             <motion.div
-                className="w-full flex content-center justify-center flex-wrap pt-8 lg:justify-end lg:w-1/2"
+                className="w-full flex content-center justify-center 
+                            flex-wrap pt-8 lg:justify-end lg:w-1/2"
                 variants={{
                     hidden: { opacity: 0, x: 50 },
-                    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } },
+                    visible: {
+                        opacity: 1,
+                        x: 0,
+                        transition: {
+                            duration: .8,
+                            ease: "easeOut",
+                            delay: .2
+                        }
+                    },
                 }}
             >
                 <div className="w-full lg:w-2/3 overflow-hidden rounded-2xl shadow-lg">
