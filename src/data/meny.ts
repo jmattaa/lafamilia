@@ -34,6 +34,11 @@ export const rullar: MenuItem[] = [
 
 export const tallrikar: MenuItem[] = [
     {
+        name: "Quesadilla",
+        contents: "Kyckling eller grönsaker i tortilla bröd med riven ost",
+        price: "125 kr",
+    },
+    {
         name: "Fajita",
         contents: "Stekt kyckling med paprika, lök, BBQ sås, vitlökssås, saltgurka, sallader och pommes",
         price: "150 kr",
