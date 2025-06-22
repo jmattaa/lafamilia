@@ -5,6 +5,7 @@ import FollowBanner from './sections/followbanner';
 import Hero from './sections/hero';
 import Contact from './sections/contact';
 import ImageCarousel from './sections/carousel';
+import Menu from './sections/menu';
 
 function App() {
     return (
@@ -14,11 +15,23 @@ function App() {
                 title="La Familia"
                 description="Tex-mex foodtruck med läcker mat"
                 image="foodtruckqeue.jpeg"
-                cta_text="Kontakta oss"
-                cta_redirect="mailto:foodtruck@lafamiliam.se"
+                ctas={
+                    [
+                        {
+                            text: "Meny",
+                            href: "#menu-section",
+                        },
+                        {
+                            text: "Kontakta oss",
+                            href: "mailto:foodtruck@lafamiliam.se"
+                        },
+                    ]
+                }
             />
-            <Catering />
+            <Menu />
             <FollowBanner />
+            <Catering />
+            <hr className="w-full my-8 border-palette-4" />
             <About />
             <ImageCarousel />
             <Contact />

@@ -18,6 +18,7 @@ function Navbar() {
 
 
     const navLinks = [
+        ["Meny", "menu-section"],
         ["Catering", "catering-section"],
         ["Om Oss", "about-section"],
     ];
@@ -53,7 +54,8 @@ function Navbar() {
                                 bg-palette-4 border-palette-4"
                     initial={{ translateY: "5vh", opacity: 0 }}
                     animate={{ translateY: 0, opacity: 1 }}
-                    transition={{ delay: (navLinks.length + .6) * .15 }}>
+                    transition={{ delay: (navLinks.length + .6) * .15 }}
+                    onClick={() => scrollToSection("contact-section")}>
                     Kontakta Oss
                 </motion.button>
             </motion.a>

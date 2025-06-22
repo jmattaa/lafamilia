@@ -6,6 +6,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                "artistamp": ["Artistamp"],
+            },
             height: {
                 inherit: "inherit",
             },
@@ -15,6 +18,10 @@ module.exports = {
                 "palette-3": "#98180b",
                 "palette-4": "#730b00",
                 "palette-5": "#490700",
+                "yellow": "#dec14e",
+                "green": "#516935",
+                "orangeish": "#cf6215",
+                "yellowish": "#e0af00",
             },
         },
     },
