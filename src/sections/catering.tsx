@@ -59,7 +59,7 @@ function Catering() {
             >
                 <div className="w-full lg:w-2/3 overflow-hidden rounded-2xl shadow-lg">
                     <motion.img
-                        src="foodtruckqeue.jpg"
+                        src="foodtruckhornstull.jpg"
                         alt="foodtruck"
                         className="w-full h-auto object-cover"
                     />

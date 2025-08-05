@@ -17,10 +17,10 @@ export default function Hero({ title, description, image, ctas }: HeroProps) {
             <motion.img
                 src={image}
                 alt={title}
-                className="absolute inset-0 w-full h-full object-cover brightness-60"
+                className="absolute inset-0 w-full h-full object-cover brightness-40"
                 initial={{ scale: 1.1 }}
                 animate={{ scale: 1 }}
-                transition={{ duration: .8, ease: "easeOut" }}
+                transition={{ duration: .6, ease: "easeOut" }}
             />
 
             {/* Overlay Content */}

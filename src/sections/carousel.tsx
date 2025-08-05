@@ -10,7 +10,6 @@ const images = [
     "/foodtruckkungs.jpg",
     "/foodtruckkungs1.jpg",
     "/foodtruckqeue.jpg",
-    "/foodtuck.jpg",
 ];
 
 const variants = {
