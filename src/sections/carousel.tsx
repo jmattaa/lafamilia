@@ -2,7 +2,16 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const images = ["quesadilla.jpg", "foodtruckqeue.jpeg", "foodtruck.jpg"];
+// i should prolly script ts
+const images = [
+    "/foodtruck.jpg",
+    "/foodtruck1.jpg",
+    "/foodtruckhornstull.jpg",
+    "/foodtruckkungs.jpg",
+    "/foodtruckkungs1.jpg",
+    "/foodtruckqeue.jpg",
+    "/foodtuck.jpg",
+];
 
 const variants = {
     enter: (direction: number) => ({
@@ -24,7 +33,7 @@ const ImageCarousel = () => {
     };
 
     return (
-        <div className="relative w-full h-[400px] flex items-center justify-center overflow-hidden rounded-xl shadow-lg">
+        <div className="relative w-full h-screen flex items-center justify-center overflow-hidden rounded-xl shadow-lg">
             <AnimatePresence initial={false} custom={direction}>
                 <motion.img
                     key={page}

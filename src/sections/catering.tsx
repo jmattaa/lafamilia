@@ -1,6 +1,25 @@
 import { motion } from "framer-motion";
 
 function Catering() {
+    const containerVariants = {
+        hidden: {}, // no transform or opacity change on parent container
+        visible: {
+            transition: {
+                staggerChildren: 0.3,
+            },
+        },
+    };
+
+    const textVariants = {
+        hidden: { opacity: 0, x: -50 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.2, ease: "easeOut" } },
+    };
+
+    const imageVariants = {
+        hidden: { opacity: 0, x: 50 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.2, ease: "easeOut" } },
+    };
+
     return (
         <motion.div
             id="catering-section"
@@ -9,17 +28,12 @@ function Catering() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            variants={{
-                visible: { transition: { staggerChildren: 0.3 } },
-            }}
+            variants={containerVariants}
         >
             {/* Text Content */}
             <motion.div
                 className="pt-8 w-full lg:w-1/2"
-                variants={{
-                    hidden: { opacity: 0, x: -50 },
-                    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
-                }}
+                variants={textVariants}
             >
                 <h1 className="text-palette-4 text-4xl text-center font-bold mb-6">
                     Catering
@@ -41,25 +55,13 @@ function Catering() {
             <motion.div
                 className="w-full flex content-center justify-center 
                             flex-wrap pt-8 lg:justify-end lg:w-1/2"
-                variants={{
-                    hidden: { opacity: 0, x: 50 },
-                    visible: {
-                        opacity: 1,
-                        x: 0,
-                        transition: {
-                            duration: .8,
-                            ease: "easeOut",
-                            delay: .2
-                        }
-                    },
-                }}
+                variants={imageVariants}
             >
                 <div className="w-full lg:w-2/3 overflow-hidden rounded-2xl shadow-lg">
                     <motion.img
-                        src="foodtruckqeue.jpeg"
+                        src="foodtruckqeue.jpg"
                         alt="foodtruck"
                         className="w-full h-auto object-cover"
-                        whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                     />
                 </div>
             </motion.div>
