@@ -14,7 +14,7 @@ function App() {
             <Hero
                 title="La Familia"
                 description="Tex-mex foodtruck med läcker mat"
-                image="foodtruckqeue.jpeg"
+                image="foodtruckqeue.jpg"
                 ctas={
                     [
                         {
