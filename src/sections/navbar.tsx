@@ -21,12 +21,14 @@ function Navbar() {
         ["Meny", "menu-section"],
         ["Catering", "catering-section"],
         ["Om Oss", "about-section"],
+        ["Menu counter", "/src/costcocounter/index.html"]
     ];
 
     const navContent = (
         <>
             {navLinks.map(([title, id], i) => (
                 <motion.a
+                    href={id.startsWith("/") ? id : "#"}
                     key={i}
                     className="relative text-white 
                                 after:content-['']
