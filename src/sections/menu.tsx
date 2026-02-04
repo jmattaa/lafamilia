@@ -3,17 +3,19 @@ import { motion } from "framer-motion";
 
 const Menu = () => {
     return (
-        <div
+        <section
             id="menu-section"
-            className="mt-8 mb-20 lg:p-8 w-screen">
-            <h1
+            className="mt-8 mb-20 lg:p-8 w-screen"
+            aria-labelledby="menu-heading">
+            <h2
+                id="menu-heading"
                 className="text-palette-4 text-4xl text-center font-bold mb-8">
                 Meny
-            </h1>
+            </h2>
 
             <div className="lg:mt-8 p-8 bg-palette-3 text-yellow rounded-t-3xl 
                             lg:rounded-3xl">
-                <h1 className="text-center text-3xl lg:text-4xl font-artistamp">RULLAR</h1>
+                <h3 className="text-center text-3xl lg:text-4xl font-artistamp">RULLAR</h3>
                 {data.rullar.map((rulle, i) => (
                     <motion.div
                         key={i}
@@ -45,7 +47,7 @@ const Menu = () => {
             </div>
 
             <div className="lg:mt-8 p-8 bg-green text-yellow lg:rounded-3xl">
-                <h1 className="text-center text-3xl lg:text-4xl font-artistamp">TALLRIKAR</h1>
+                <h3 className="text-center text-3xl lg:text-4xl font-artistamp">TALLRIKAR</h3>
                 {data.tallrikar.map((tallrik, i) => (
                     <motion.div
                         key={i}
@@ -77,7 +79,7 @@ const Menu = () => {
             </div>
 
             <div className="lg:mt-8 p-8 bg-yellowish text-white lg:rounded-3xl">
-                <h1 className="text-center text-3xl lg:text-4xl font-artistamp">BARNMENY</h1>
+                <h3 className="text-center text-3xl lg:text-4xl font-artistamp">BARNMENY</h3>
                 {data.barnmeny.map((barn, i) => (
                     <motion.div
                         key={i}
@@ -111,7 +113,7 @@ const Menu = () => {
 
             <div className="lg:mt-8 p-8 bg-orangeish text-white rounded-b-3xl
                             lg:rounded-3xl">
-                <h1 className="text-center text-3xl lg:text-4xl font-artistamp">SNACKS</h1>
+                <h3 className="text-center text-3xl lg:text-4xl font-artistamp">SNACKS</h3>
                 {data.snacks.map((snack, i) => (
                     <motion.div
                         key={i}
@@ -141,7 +143,7 @@ const Menu = () => {
                     </motion.div>
                 ))}
             </div>
-        </div>
+        </section>
     )
 };
 

@@ -12,7 +12,7 @@ interface HeroProps {
 
 export default function Hero({ title, description, image, ctas }: HeroProps) {
     return (
-        <div className="relative h-screen flex items-center justify-center text-center px-6 sm:px-12 overflow-hidden">
+        <section className="relative h-screen flex items-center justify-center text-center px-6 sm:px-12 overflow-hidden">
             {/* Background Image */}
             <motion.img
                 src={image}
@@ -21,6 +21,8 @@ export default function Hero({ title, description, image, ctas }: HeroProps) {
                 initial={{ scale: 1.1 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: .6, ease: "easeOut" }}
+                loading="eager"
+                fetchPriority="high"
             />
 
             {/* Overlay Content */}
@@ -45,18 +47,19 @@ export default function Hero({ title, description, image, ctas }: HeroProps) {
                             className={`
                                 px-6 py-3 rounded-xl text-lg font-semibold 
                                 shadow-lg transition-all duration-300
-                                hover:scale-105
+                                hover:scale-105 focus:scale-105
                                 ${i === 0
-                                    ? "bg-palette-1 text-white hover:bg-palette-1/80"
-                                    : "border border-white text-white hover:bg-white hover:text-black"}
+                                    ? "bg-palette-1 text-white hover:bg-palette-1/80 focus:bg-palette-1/80"
+                                    : "border border-white text-white hover:bg-white hover:text-black focus:bg-white focus:text-black"}
                             `}
+                            aria-label={text}
                         >
                             {text}
                         </a>
                     ))}
                 </div>
             </motion.div>
-        </div>
+        </section>
     );
 }
 

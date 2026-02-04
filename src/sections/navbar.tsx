@@ -21,14 +21,14 @@ function Navbar() {
         ["Meny", "menu-section"],
         ["Catering", "catering-section"],
         ["Om Oss", "about-section"],
-    ];
+    ] as const;
 
     const navContent = (
         <>
             {navLinks.map(([title, id], i) => (
-                <motion.a
+                <motion.button
                     key={i}
-                    className="relative text-white 
+                    className="relative text-white bg-transparent border-none cursor-pointer
                                 after:content-['']
                                 after:flex after:absolute
                                 after:bottom-0 after:left-0 
@@ -38,27 +38,26 @@ function Navbar() {
                                 after:transition-[opacity,transform]
                                 after:duration-300 
                                 hover:after:opacity-100
-                                hover:after:scale-x-[1]"
+                                hover:after:scale-x-[1] focus:after:opacity-100
+                                focus:after:scale-x-[1]"
                     onClick={() => scrollToSection(id)}
+                    aria-label={`Navigera till ${title}`}
                     initial={{ translateY: "5vh", opacity: 0 }}
                     animate={{ translateY: 0, opacity: 1 }}
                     transition={{ delay: (i + 1) * .15 }}>
                     {title}
-                </motion.a>
+                </motion.button>
             ))}
-            <motion.a
-                href="#"
-                className="link">
-                <motion.button
-                    className="px-6 py-2 border rounded text-white 
-                                bg-palette-4 border-palette-4"
-                    initial={{ translateY: "5vh", opacity: 0 }}
-                    animate={{ translateY: 0, opacity: 1 }}
-                    transition={{ delay: (navLinks.length + .6) * .15 }}
-                    onClick={() => scrollToSection("contact-section")}>
+            <motion.button
+                className="px-6 py-2 border rounded text-white 
+                            bg-palette-4 border-palette-4 cursor-pointer"
+                onClick={() => scrollToSection("contact-section")}
+                aria-label="Kontakta Oss"
+                initial={{ translateY: "5vh", opacity: 0 }}
+                animate={{ translateY: 0, opacity: 1 }}
+                transition={{ delay: (navLinks.length + 0.6) * 0.15 }}>
                     Kontakta Oss
                 </motion.button>
-            </motion.a>
         </>
     );
 
@@ -81,8 +80,13 @@ function Navbar() {
                     className="text-lg font-extrabold text-white"
                     initial={{ translateY: "-5vh", opacity: 0 }}
                     animate={{ translateY: 0, opacity: 1 }}
-                    transition={{ delay: .244 }} >
-                    <a href="/">La Familia</a>
+                     transition={{ delay: 0.244 }}>
+                    <button 
+                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                     className="text-white bg-transparent border-none cursor-pointer font-extrabold text-lg hover:opacity-80 focus:opacity-80"
+                     aria-label="Gå till startsidan">
+                     La Familia
+                 </button>
                 </motion.div>
 
                 <div
