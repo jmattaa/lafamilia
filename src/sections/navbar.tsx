@@ -22,11 +22,11 @@ function Navbar() {
         ["Catering", "catering-section"],
         ["Om Oss", "about-section"],
     ] as const;
-
     const navContent = (
         <>
             {navLinks.map(([title, id], i) => (
-                <motion.button
+                <motion.a
+                    href={id.startsWith("/") ? id : "#"}
                     key={i}
                     className="relative text-white bg-transparent border-none cursor-pointer
                                 after:content-['']
@@ -46,7 +46,7 @@ function Navbar() {
                     animate={{ translateY: 0, opacity: 1 }}
                     transition={{ delay: (i + 1) * .15 }}>
                     {title}
-                </motion.button>
+                </motion.a>
             ))}
             <motion.button
                 className="px-6 py-2 border rounded text-white 
